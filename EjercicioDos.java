@@ -3,20 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ejercicio2;
+package ejerciciodos;
+
+import java.util.Scanner;
 
 /**
  *
  * @author alumno
  */
-public class Ejercicio2 {
+public class EjercicioDos {
 
     /**
      * @param args the command line arguments
-     * Se debe pedir un nombre y se debe mostrar el mismo nombre
+     * Se debe pedir un nombre y se debe mostrar ese mismo nombre
+     * 
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        String Nombre;
+        Scanner MiEscaner = new Scanner(System.in);
+        System.out.println("ingrese un nombre");
+        Nombre= MiEscaner.nextLine();
+        
     }
     
 }
