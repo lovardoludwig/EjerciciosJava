@@ -17,8 +17,10 @@ public class NumeroUno {
      * esto funciona de maravilla
      */
     public static void main(String[] args) {
-       int NumeroUno;
-        System.out.println("agregue un comentario");
+        System.out.println("esto funciona de maravilla");
+        
+        int NumeroUno;
+        System.out.println("agregue un numero");
     }
     
 }
