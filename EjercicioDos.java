@@ -23,7 +23,7 @@ public class EjercicioDos {
         Scanner MiEscaner = new Scanner(System.in);
         System.out.println("ingrese un nombre");
         Nombre= MiEscaner.nextLine();
-        
+        System.out.println("Su nombre es: " + Nombre);
     }
     
 }
