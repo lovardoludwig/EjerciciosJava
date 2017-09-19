@@ -34,6 +34,9 @@ public class EjercicioCatorce {
         {
             System.out.println("Clave Erronea");
         }
+        /*15 Se ingresa un importe, si su supera los 100 pesos se le agrega un 23%, si es menor se le descuenta el 50%
+        16 Se ingresa el importe de un pasaje de avion y el mes de viaje,  si es enero se le descuenta un 10% por temporada baja
+        */
     }
     
 }
