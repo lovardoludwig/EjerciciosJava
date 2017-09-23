@@ -20,19 +20,21 @@ public class EjercicioDieciseis {
     public static void main(String[] args) {
         String DatoAux;
         Integer Importe;
-        String Mes
+        String Mes;
+        Integer Total;
         Scanner MiEscaner = new Scanner(System.in);
         
         System.out.println("Ingrese el importe del pasaje de avion:");
         DatoAux = MiEscaner.next();
         Importe = Integer.parseInt(DatoAux);
         
-        System.out.println("Ingrese mes de viaje");
+        System.out.println("Ingrese mes de viaje:");
         Mes = MiEscaner.next();
         
-        if (Mes = Enero)
+        if(Mes.equals("Enero"))
         {
-            Importe-(Importe*10)/100
+            Total=Importe-(Importe*10)/100;
+            System.out.println("" + Total);
         }        
         }
     
