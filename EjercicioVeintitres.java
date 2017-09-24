@@ -19,13 +19,21 @@ public class EjercicioVeintitres {
      */
     public static void main(String[] args) {
         Scanner MiEscaner = new Scanner(System.in);
+        String DatoAux;
         Double Ancho;
         Double Largo;
+        Double Total;
         
+        System.out.println("Ingrese el ancho");
+        DatoAux = MiEscaner.next();
+        Ancho = Double.parseDouble(DatoAux);
         
+        System.out.println("Ingrese el largo");
+        DatoAux = MiEscaner.next();
+        Largo = Double.parseDouble(DatoAux);
         
-        
-        
+        Total = (Ancho*2 + Largo*2)*3;
+        System.out.println("" + Total);
         
     }
     
