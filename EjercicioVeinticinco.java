@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Agus
+ * @author alumno
  */
 public class EjercicioVeinticinco {
 
@@ -21,25 +21,31 @@ public class EjercicioVeinticinco {
         Scanner MiEscaner = new Scanner(System.in);
         Integer Cal;
         Integer Cemento;
-        Double Alto;
-        Double Ancho;
+        Integer Alto;
+        Integer Ancho;
         Integer Pared;
-        String DatoAux;
-        
+        Integer CCemento;
+        Integer CCal;
+        String DatoAux;     
+       
         System.out.println("El ancho de la pared es de:");
         DatoAux = MiEscaner.next();
-        Ancho = Double.parseDouble(DatoAux);
+        Ancho = Integer.parseInt(DatoAux);
         
         System.out.println("El alto de la pared es de:");
         DatoAux = MiEscaner.next();
-        Alto = Double.parseDouble(DatoAux);
+        Alto = Integer.parseInt(DatoAux);
         
-        DatoAux = MiEscaner.next();
-        Pared = Integer.parseInt(DatoAux);
-        
+        Pared = Alto * Ancho;
+        System.out.println("El tamaño de la pared es de:" + Pared);
+                
         Cemento = 3;
         Cal = 2;
-        Pared = Cemento + Cal;
+        CCemento = Pared * Cemento;
+        System.out.println("Cantidad de cemento necesaria:" + CCemento);
+        CCal = Pared * Cal;
+        System.out.println("Cantidad de cal necesaria:" + CCal);
+        
         
         
         
