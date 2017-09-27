@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Agus
+ * @author alumno
  */
 public class AdivinaElNumero {
 
@@ -20,6 +20,7 @@ public class AdivinaElNumero {
         Scanner MiEscaner = new Scanner(System.in);
         Integer NumeroR;
         Integer Numero;
+        Integer Diferencia;
         String DatoAux;
                 
         System.out.println("Ingrese un numero");
@@ -29,6 +30,9 @@ public class AdivinaElNumero {
         NumeroR = (int) (Math.random()*10) + 1;
         System.out.println("El numero secreto es: "+NumeroR);
         
+        DatoAux = MiEscaner.next();
+        Diferencia = Integer.parseInt(DatoAux);
+        
         if(Numero.equals(NumeroR))
         {
             System.out.println("Acerto al numero");
@@ -37,7 +41,7 @@ public class AdivinaElNumero {
             if (Numero>NumeroR)
             {
                 System.out.println("Te pasaste");
-                switch(Numero - NumeroR)
+                /*switch(Numero - NumeroR)
                 {
                     case 1:
                         System.out.println("Casi casi");
@@ -53,11 +57,11 @@ public class AdivinaElNumero {
                         break;
                     default:
                         System.out.println("Sos horrible en este juego");
-                }
+                }*/
             }else
             {
                 System.out.println("Te faltó");
-                switch(NumeroR - Numero)
+                /*switch(NumeroR - Numero)
                 {
                     case 1:
                         System.out.println("Casi casi");
@@ -72,16 +76,17 @@ public class AdivinaElNumero {
                         System.out.println("Bien lejos");
                         break;
                     default:
-                        System.out.println("Sos horrible en este juego");
+                        System.out.println("Sos horrible en este juego");*/
                 }
+                Diferencia = Numero - NumeroR;
+                switch(NumeroR - Numero)
+                {
+                    case -1:
+                    case 1:
+                        System.out.println("...");
+                        break;
             }
         }
-        //informar si:
-        //si le erro por un punto , mensaje casi casi
-        //si le erro por dos puntos, mensaje cerca
-        //si le erro por tres puntos, mensaje ni cerca
-        //si le erro por cuatro puntos, mensaje bien lejos
-        //para todos los demas, sos horrible en este juego
     }
     
 }
