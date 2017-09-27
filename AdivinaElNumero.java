@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author alumno
+ * @author Agus
  */
 public class AdivinaElNumero {
 
@@ -37,12 +37,46 @@ public class AdivinaElNumero {
             if (Numero>NumeroR)
             {
                 System.out.println("Te pasaste");
+                switch(Numero - NumeroR)
+                {
+                    case 1:
+                        System.out.println("Casi casi");
+                        break;
+                    case 2:
+                        System.out.println("Cerca");
+                        break;
+                    case 3:
+                        System.out.println("Ni cerca");
+                        break;
+                    case 4:
+                        System.out.println("Bien lejos");
+                        break;
+                    default:
+                        System.out.println("Sos horrible en este juego");
+                }
             }else
             {
                 System.out.println("Te faltó");
+                switch(NumeroR - Numero)
+                {
+                    case 1:
+                        System.out.println("Casi casi");
+                        break;
+                    case 2:
+                        System.out.println("Cerca");
+                        break;
+                    case 3:
+                        System.out.println("Ni cerca");
+                        break;
+                    case 4:
+                        System.out.println("Bien lejos");
+                        break;
+                    default:
+                        System.out.println("Sos horrible en este juego");
+                }
             }
         }
-        //a informar si:
+        //informar si:
         //si le erro por un punto , mensaje casi casi
         //si le erro por dos puntos, mensaje cerca
         //si le erro por tres puntos, mensaje ni cerca
