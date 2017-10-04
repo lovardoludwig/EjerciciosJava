@@ -7,8 +7,6 @@ package examen;
 
 import java.util.Scanner;
 
-
-
 /**
  *
  * @author alumno
@@ -62,11 +60,32 @@ public class Examen {
             case 12:
                 GuiaInicial.HacerEjercicio22();
                 break;
-                
-                
-                
-                
+            case 13:
+                GuiaSwitch.HacerEjercicio28();
+                break;
+            case 14:
+                GuiaSwitch.HacerEjercicio29();
+                break;
+            case 15:
+                GuiaSwitch.HacerEjercicio30();
+                break;
+            case 16:
+                GuiaSwitch.HacerEjercicio31();
+                break;
+            case 17:
+                GuiaSwitch.HacerEjercicio32();
+                break;
+            case 18:
+                GuiaSwitch.HacerEjercicio33();
+                break;
+            case 19:
+                GuiaSwitch.HacerEjercicio34();
+                break;
+            case 20:
+                GuiaSwitch.HacerEjercicio35();
+                break;
+                            
         }
-    }
     
+    }
 }
