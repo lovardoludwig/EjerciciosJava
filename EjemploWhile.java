@@ -23,7 +23,11 @@ public class EjemploWhile {
         //EjemploWhile.IteracionSinCantidad();
         //EjemploWhile.SalidaPorLogica();
         //EjemploWhile.PedirNumeros();
-        EjemploWhile.MostrarMenu();
+        //EjemploWhile.MostrarMenu();
+        //EjemploWhile.TomarDatosValidados();
+        //EjemploWhile.ContadoresYAcumuladores();
+        //EjemploWhile.NumeroPrimo();
+        EjemploWhile.PrimosDelUnoAlCien();
     }//finaliza el main
     
     /**
@@ -51,11 +55,9 @@ public class EjemploWhile {
     //finaliza promedio con if    
         
     }
-    
     /**
      * Pide dos numeros e informa el promedio
      */
-    
     public static void PromedioConWhile()
     {
         Scanner MiEscaner = new Scanner(System.in);
@@ -78,7 +80,6 @@ public class EjemploWhile {
 
         
     }
-    
     /**
      * Cuando no sabe,os la cantidad de iteraciones
      */
@@ -92,7 +93,6 @@ public class EjemploWhile {
             continuar = MiEscaner.next();
         }
     }
-    
     public static void SalidaPorLogica()
     {
         String continuar="si";
@@ -107,7 +107,6 @@ public class EjemploWhile {
             }
        } 
     }
-    
     public static void PedirNumeros()
     {
         Integer numero;
@@ -130,7 +129,6 @@ public class EjemploWhile {
         System.out.println("La suma es "+suma);
         System.out.println("La cantidad es "+contador);
     }
-    
     public static void MostrarMenu()
     {
         String opcion="nada";
@@ -170,7 +168,6 @@ public class EjemploWhile {
         System.out.println("Cerro el menu");
         
     }
-    
     public static void Sumar()
     {
         Integer numeroUno;
@@ -247,5 +244,181 @@ public class EjemploWhile {
         resultado=numeroUno/numeroDos;
         System.out.println("El resultado de la division es: "+resultado);
     }
-    
+    /**
+     * Pide los datos de una persona y valida cada uno
+     * Datos a pedir:
+     * Nombre
+     * Edad(entre 1 y 100 años)
+     * Sexo (f o m)
+     * Estado civil (soltero, casado, divorciado)
+     * Nacionalidad (n: nativo, l: latino, e: europeo, r: resto del mundo)
+     * Sueldo (entre 8000 y 58000)
+     * Dona organos(si o no)
+     * Clave de no menos 6 caracteres
+     */
+    public static void TomarDatosValidados()
+    {
+        Scanner MiEscaner = new Scanner(System.in);
+        String aux;
+        String nombre;
+        Integer edad;
+        String sexo;
+        String estadoCivil;
+        String nacionalidad;
+        Integer sueldo;
+        String donador;
+        String clave;
+        
+        System.out.println("Ingrese nombre:");
+        nombre = MiEscaner.next();
+        
+        System.out.println("Ingrese edad");
+        aux = MiEscaner.next();
+        edad = Integer.parseInt(aux);
+        while((edad<1)||(edad>100))
+        {
+            System.out.println("Ingrese edad:");
+            aux = MiEscaner.next();
+            edad = Integer.parseInt(aux);
+        }
+        
+        System.out.println("Ingrese sexo:");
+        sexo = MiEscaner.next();
+        while(!sexo.equals("f")&&(!sexo.equals("m")))
+        {
+            System.out.println("Ingrese sexo");
+            sexo = MiEscaner.next();
+        }
+        
+        System.out.println("Ingrese estado civil:");
+        estadoCivil = MiEscaner.next();
+        while(!estadoCivil.equals("soltero")&&!estadoCivil.equals("casado")&&!estadoCivil.equals("divorciado"))
+        {
+            System.out.println("Ingrese estado civil");
+            estadoCivil = MiEscaner.next();
+        }
+        
+        System.out.println("Ingrese nacionalidad:");
+        nacionalidad = MiEscaner.next();
+        while(!nacionalidad.equals("n")&&!nacionalidad.equals("l")&&!nacionalidad.equals("e")&&!nacionalidad.equals("r"))
+        {
+            System.out.println("Ingrese nacionalidad");
+            nacionalidad = MiEscaner.next();
+        }
+        
+        System.out.println("Ingrese sueldo:");
+        aux = MiEscaner.next();
+        sueldo = Integer.parseInt(aux);
+        while((sueldo<8000)||(sueldo>58000))
+        {
+            System.out.println("Ingrese sueldo:");
+            aux = MiEscaner.next();
+            sueldo = Integer.parseInt(aux);
+        }
+        
+        System.out.println("Ingrese si es o no donador de organos:");
+        donador = MiEscaner.next();
+        while(!donador.equals("no")&&!donador.equals("si"))
+        {
+            System.out.println("Ingrese si es o no donador de organos:");
+            donador = MiEscaner.next();
+        }
+        
+        System.out.println("Ingrese clave:");
+        clave = MiEscaner.next();
+        while(clave.length()<6)
+        {
+            System.out.println("Ingrese clave:");
+            clave = MiEscaner.next();
+        }
+        
+        //String otroAux="lalala";
+        //Integer resultado = otroAux.length();
+        //System.out.println("Resultado: "+resultado);
+        //Resultado del largo de la contraseña ingresada
+    }
+    public static void ContadoresYAcumuladores()
+    {
+        Integer contador=0;
+        Integer acumulador=0;
+        Integer factorial=1;
+        //factorial=multiplicacion de todos los numeros antecesores a un numero
+        Integer restador=0;
+        Integer contadorPares=0;
+        Integer contadorDiv3=0;
+        
+        
+        while(contador<10)
+        {
+            contador++;
+            System.out.println("numero: "+contador);
+            acumulador=acumulador+contador;
+            factorial=factorial*contador;
+            restador=restador-contador;
+            if(contador%2==0)
+            {
+                contadorPares++;
+            }
+            if(contador%3==0)
+            {
+                contadorDiv3++;
+            }
+        }
+        System.out.println("la suma es: "+acumulador);
+        System.out.println("la multiplicacion es: "+factorial);
+        System.out.println("la resta es: "+restador);
+        System.out.println("la cantidad de pares es: "+contadorPares);
+        System.out.println("los multiplos de 3 son: "+contadorDiv3);
+    }
+    public static void PrimosDelUnoAlCien()
+    {
+        Integer numeroIngresado=1;
+        while(numeroIngresado<101)
+        {
+            numeroIngresado++;
+            Integer  contador=2;
+            Integer contadorDivisores=0;
+
+            while(contador<numeroIngresado)
+            {
+                if(numeroIngresado%contador==0)
+                {
+                    contadorDivisores++;
+                    break;
+                }            
+                contador++;
+            }
+            if(contadorDivisores>0)
+            {
+                //System.out.println("no es primo");
+            }else
+            {
+                System.out.println("es primo");
+            }
+        }
+    }
+    public static void NumeroPrimo()
+    {
+        Integer numeroIngresado=357;
+        Integer  contador=2;
+        Integer contadorDivisores=0;
+
+        while(contador<numeroIngresado)
+            {
+                if(numeroIngresado%contador==0)
+                {
+                    contadorDivisores++;
+                    break;
+                }            
+                contador++;
+            }
+            if(contadorDivisores>0)
+            {
+                System.out.println("no es primo");
+            }else
+            {
+                System.out.println("es primo");
+            }
+    }
 }
+    
