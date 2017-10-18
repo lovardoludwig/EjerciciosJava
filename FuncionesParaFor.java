@@ -228,21 +228,113 @@ public class FuncionesParaFor
             }
         }
     }
-    public static void FibinacciSucesion()
+    public static void FibonacciSucesion()
     {
-        Integer numero=1;
-        Integer suma=1;
-        Integer anterior=1;
         Integer fibonacci;
-        Integer auxAnterior;
-        
-        for (int contador = 1; contador < 10; contador++) {
-            
-            auxAnterior=fibonacci;
-            fibonacci=suma+anterior;
-            anterior=fibonacci;
-            
-            System.out.println("serie"+fibonacci);
+        Integer actual=1;
+        Integer anterior=0;
+        for (int contador = 0; contador < 20; contador++)
+        {
+            fibonacci= anterior+actual;
+            anterior=actual;
+            actual=fibonacci;
+            System.out.println("es el: "+fibonacci);
         }
+    }
+    /**
+     * rocorrer los numero del 1 al 100
+     * mostrar en lugar del numero la palabra "UTN" para todos los
+     * multiplos de 3
+     * mostrar en lugar del numero la palabra "FRA" para todos los
+     * multiplos de 5
+     * mostrar en lugar del numero la palabra "UTN" para todos los
+     * multiplos de 3 y 5
+     */
+    public static void SerieUtnFra()
+    {
+        for (int numero = 0; numero < 100; numero++) 
+        {
+            if(numero%3==0&&numero%5==0)
+            {
+                System.out.println("UTNFRA");
+            }else
+            {
+                if(numero%3==0)
+                {
+                    System.out.println("UTN");
+                }else
+                {
+                    if(numero%5==0)
+                    {
+                        System.out.println("FRA");
+                    }else
+                    {
+                        System.out.println(numero);
+                    }
+                }
+            }
+        }
+    }
+    /**
+     * 153 1^3+5^3+3^3=153
+     */
+    public static void NumeroArmstrong()
+    {
+        Integer numeroIngresado=153;
+        Integer numero=numeroIngresado;
+        if(numero<0)
+        {
+            numero=numero*-1;
+        }
+        Integer cantidadDigitos=0;
+        while(numero>0)
+        {
+            numero=numero/10;
+            cantidadDigitos++;
+        }
+        System.out.println(cantidadDigitos);
+        Integer digito;
+        Integer suma=0;
+        Integer auxNumero=numeroIngresado;
+        while(auxNumero>0)
+        {
+            digito=auxNumero%10;
+            suma=suma+(int)Math.pow(digito,cantidadDigitos);
+            auxNumero=auxNumero/10;
+            System.out.println(digito);
+        }
+        System.out.println(suma);
+        if(suma==numeroIngresado)
+        {
+            System.out.println("no es un numero armstrong");
+        }else
+        {
+            System.out.println("es un numero armstrong");
+        }
+    }
+    public static void HacerPiramide()
+    {
+        Integer cantidadFilas=9;
+        for (int contador = 1; contador < cantidadFilas; contador++)
+        {
+            for (int contadorLugares = cantidadFilas-1; contadorLugares > contador; contadorLugares--) {
+                System.out.print(" ");
+            }
+            for (int contadorDos = 1; contadorDos <=(2*contador-1) ; contadorDos++) {
+                System.out.print("X");
+            }
+            System.out.println("");
+        }
+    }
+    public static void EscalaNumeros()
+    {
+        Integer cantidadFilas=5;
+        for (int contador = 1; contador < cantidadFilas; contador++)
+        {
+            for (int contadorDos = 1; contadorDos <=(2*contador-1) ; contadorDos++) {
+                System.out.print("1");
+            }
+            System.out.println("");
+        }   
     }
 }
