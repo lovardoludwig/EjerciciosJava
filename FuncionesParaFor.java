@@ -337,4 +337,131 @@ public class FuncionesParaFor
             System.out.println("");
         }   
     }
+    public static void MostrarPalíndromo()
+    {
+        Integer numeroReverso;
+        Integer numero=3553;
+        String numeroEnLetras="";
+        Integer numeroActual;
+        for (int contador = 0; numero > 0; contador++)
+        {
+            numeroActual=numero%10;
+            numero=numero/10;
+            numeroEnLetras=numeroEnLetras+numeroActual;
+        }
+        numeroReverso=Integer.parseInt(numeroEnLetras);
+        if(numero==numeroReverso)
+        {
+            System.out.println("es palíndromo");
+        }
+        
+    }
+    public static void EjercicioSerieUTNFRA()
+    {
+        Integer bandera=0;
+        for (int numero = 1; numero < 100; numero++)
+        {
+            if(numero%3==0&&numero%5==0)
+            {
+                System.out.println("UTN-FRA");
+                bandera=1;
+            }else
+            {
+                if(numero%3==0)
+                {
+                    System.out.println("FRA");
+                    bandera=1;
+                }else
+                {
+                    if(numero%5==0)
+                    {
+                        System.out.println("UTN");
+                        bandera=1;
+                    }
+                }
+            }
+            if(bandera==0)
+            {
+                System.out.println(numero);
+            }
+            bandera=0;
+            /**if(numero%5!=0&&numero%3!=0)
+            {
+                System.out.println(numero);
+            }**/
+        }
+    }
+    public static void TablaDeMultiplicar()
+    {
+        Scanner MiEscaner=new Scanner(System.in);
+        Integer numero=0;
+        Integer resultado;
+        String aux;
+        
+        System.out.println("Ingrese un numero: ");
+        aux=MiEscaner.next();
+        numero=Integer.parseInt(aux);
+        while(numero<30)
+        {
+            for (int contador = 0; contador < 11; contador++) {
+                resultado=numero*contador;
+                System.out.println(numero+"*"+contador+"="+resultado);
+            }
+            break;
+        }
+    }
+    public static void PatronDeLetras()
+    {
+        char  letra;
+        
+        /*for (letra = 'A'; letra < 'a'; letra++)
+        {
+            System.out.println(letra);
+        }
+        System.out.println((char)65.567);*/
+        for (int contador = 97; contador <= 122; contador++)
+        {
+            for (int i = 97; i <= contador; i++) {
+                System.out.print((char)i);
+            }
+            System.out.println();
+        }
+    }
+    public static void PatronDeLetrasDos()
+    {
+        char  letra;
+        for (int contador = 65; contador < 91; contador++)
+        {
+            for (int i = 65; i <= contador; i++) 
+            {
+                char letraCasteada=(char)i;
+                switch(letraCasteada)
+                {
+                    case'A':
+                        System.out.print(1);
+                        break;
+                    case'E':
+                        System.out.print(2);
+                        break;
+                    case'I':
+                        System.out.print(3);
+                        break;
+                    case'O':
+                        System.out.print(4);
+                        break;
+                    case'U':
+                        System.out.print(5);
+                        break;
+                    default:
+                }System.out.print((char)i);
+            }
+            System.out.println();
+        }
+    }
+    public static void MostrarCaracteresAscii()
+    {
+        for (int contador = 0; contador < 150; contador++) {
+            System.out.println(contador+"="+(char)contador);
+        }
+    }
 }
