@@ -317,10 +317,12 @@ public class FuncionesParaFor
         Integer cantidadFilas=9;
         for (int contador = 1; contador < cantidadFilas; contador++)
         {
-            for (int contadorLugares = cantidadFilas-1; contadorLugares > contador; contadorLugares--) {
+            for (int contadorLugares = cantidadFilas-1; contadorLugares > contador; contadorLugares--)
+            {
                 System.out.print(" ");
             }
-            for (int contadorDos = 1; contadorDos <=(2*contador-1) ; contadorDos++) {
+            for (int contadorDos = 1; contadorDos <=(2*contador-1) ; contadorDos++)
+            {
                 System.out.print("X");
             }
             System.out.println("");
@@ -460,8 +462,28 @@ public class FuncionesParaFor
     }
     public static void MostrarCaracteresAscii()
     {
-        for (int contador = 0; contador < 150; contador++) {
+        for (int contador = 0; contador < 150; contador++)
+        {
             System.out.println(contador+"="+(char)contador);
+        }
+    }
+    public static void PiramideLetras()
+    {
+        Integer cantidadFilas=9;
+        for (int contador = 1; contador < cantidadFilas; contador++)
+        {
+            for (int contadorLugares = cantidadFilas-1; contadorLugares > contador; contadorLugares--)
+            {
+                System.out.print(" ");
+            }
+            for (int contadorDos = 1; contadorDos <=(2*contador-1) ; contadorDos++)
+            {
+                for (int contadorLetras = 0; contadorLetras < 150; contador++)
+                {
+                    System.out.print(contadorLetras+"="+(char)contadorLetras);
+                }
+            }
+            System.out.println("");
         }
     }
 }
