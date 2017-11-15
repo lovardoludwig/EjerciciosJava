@@ -120,5 +120,8 @@ public class Auto {
             break;
         }
     }
-    
+    private void EscuderiaRandom()
+    {
+        
+    }
 }
