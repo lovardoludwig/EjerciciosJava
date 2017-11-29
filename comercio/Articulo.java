@@ -65,7 +65,7 @@ public class Articulo {
     
     public int GetStock()
     {
-        
+        return this._stock;
     }
     
     public float getGanancia()

@@ -45,7 +45,7 @@ public class Comercio2 {
         System.out.println("ganancia: "+ganaciaTotal);
     }
     
-    public String ComprarArticulo(Articulo art,Articulo cantidad)
+    public String ComprarArticulo(Articulo art,int cantidad)
     {
         
         for (Articulo miart : this._misArticulos) 

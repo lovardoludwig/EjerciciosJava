@@ -22,7 +22,7 @@ public class Venta {
     public float RetornarGanancia()
     {
         float precioFacturado=this._articuloVendido.getGanancia()*this._cantidad;
-        return 
+        return precioFacturado;
     }
     public void MostrarVenta()
     {
