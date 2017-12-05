@@ -1,0 +1,29 @@
+("100","perez","peron 876","quilmes"),
+("101","gimenez","mitre 750","avellaneda"),
+("102","aguirre","boedo 634","bernal")
+
+(1,"caramelo","1.5","chico"),
+(2,"cigarrillos","45.89","mediano"),
+(3,"gaseosa","15.80","grande")
+
+(100,1,500),(100,2,1500),(100,3,100),(101,2,55),(101,3,225),(102,1,600),(102,3,300)
+
+1.SELECT `pNumero`, `pNombre`, `precio flotante`, `tamaño`
+FROM productos as pro
+ORDER BY pro.pNombre ASC
+
+2.SELECT `numero`, `nombre`, `domicilio`, `localidad`
+FROM proveedores as prov
+WHERE prov.localidad="quilmes"
+
+3.SELECT cantidad
+FROM envios 
+WHERE cantidad BETWEEN 200 AND 300
+
+4.SELECT SUM(cantidad)
+FROM envios
+
+5.SELECT p.pNombre
+FROM envios as e, productos as p
+WHERE e.pNumero=p.pNumero
+LIMIT 3
