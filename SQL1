@@ -27,3 +27,28 @@ FROM envios
 FROM envios as e, productos as p
 WHERE e.pNumero=p.pNumero
 LIMIT 3
+
+6.SELECT pv.nombre,pd.pNombre
+FROM provedores as pv, 
+productos as pd,
+envios as e
+WHERE 
+pv.numero=e.numero 
+AND
+pd.pNumero=e.pNumero
+
+7.
+
+8.SELECT SUM(cantidad) //no se usan espacios
+FROM envios as e
+WHERE e.numero= 102 AND e.pNumero=1
+
+9.SELECT pd.pNumero, pv.localidad
+FROM productos as pd,
+provedores as pv
+WHERE pv.localidad="avellaneda"
+
+10.SELECT (domicilio), (localidad)
+FROM provedores as pv
+WHERE nombre LIKE %i%
+//sin terminar
