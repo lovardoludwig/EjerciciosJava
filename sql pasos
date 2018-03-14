@@ -1,0 +1,26 @@
+CREATE SCHEMA `guia` DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish2_ci ;
+
+CREATE TABLE `guia`.`personas` (
+  `idpersonas` INT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(45) NOT NULL,
+  `apellido` VARCHAR(45) NOT NULL,
+  `id_localidad` INT NOT NULL,
+  PRIMARY KEY (`idpersonas`));
+
+CREATE TABLE `guia`.`localidad` (
+  `idlocalidad` INT NULL AUTO_INCREMENT,
+  `localidad` VARCHAR(45) NOT NULL,
+  `id_provincia` INT NULL,
+  PRIMARY KEY (`idlocalidad`));
+
+CREATE TABLE `guia`.`provincia` (
+  `idprovincia` INT NULL AUTO_INCREMENT,
+  `provincia` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idprovincia`));
+
+//conectar las primary key y las foreign key
+select *
+from guia.personas p
+inner join localidad l on p.id_localidad=l.idlocalidad
+inner join provincia pr on l.id_provincia=pr.idprovincia
+where pr.idprovincia=2
