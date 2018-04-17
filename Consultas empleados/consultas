@@ -1,0 +1,6 @@
+1. empleados
+2. empleados(nombre, apellido, departamento)
+3. empleados(nombre, apellido, salario)
+4. empleados(nombre, apellido, salario)>7000
+5. (nombre, apellido, departamento)  where emginner
+6. departamento (nombre) donde
