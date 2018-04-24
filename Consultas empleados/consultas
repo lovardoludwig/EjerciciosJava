@@ -1,6 +1,93 @@
-1. empleados
-2. empleados(nombre, apellido, departamento)
-3. empleados(nombre, apellido, salario)
-4. empleados(nombre, apellido, salario)>7000
-5. (nombre, apellido, departamento)  where emginner
-6. departamento (nombre) donde
+2.  select e.first_name, e.last_name, dept_name
+    from employees e
+	inner join dept_emp de on de.emp_no=e.emp_no
+	inner join departments d on d.dept_no=de.dept_no
+
+3.  select e.first_name, e.last_name, s.salary
+	from employees e
+	inner join salaries s
+	on e.emp_no=s.emp_no
+
+4.  select e.first_name, e.last_name, s.salary
+	from employees e
+	inner join salaries s
+	on e.emp_no=s.emp_no
+	where s.salary>7000
+
+5.  select e.first_name, e.last_name, d.dept_name
+	from employees e
+	inner join dept_emp de
+	on e.emp_no=de.emp_no
+	inner join departments d
+	on d.dept_no=de.dept_no
+	inner join titles t
+	on t.emp_no=e.emp_no
+	where t.title="engineer"
+
+6.  select t.title, d.dept_name
+	from departments d
+	inner join dept_manager dm
+	on dm.dept_no=d.dept_no
+	inner join titles t
+	on t.emp_no=dm.emp_no
+	where t.title="engineer"
+
+8.  select e.first_name, e.last_name, s.salary
+	from employees e
+	inner join salaries s
+	on s.emp_no=e.emp_no
+	inner join dept_manager dm
+	on dm.dept_no=(select d.dept_no
+	from departments d
+	where d.dept_name="research")
+
+9.  select e.first_name, e.last_name
+	from employees e
+	inner join dept_manager dm
+	on dm.dept_no=(select d.dept_no
+	from departments d
+	where d.dept_name="customer service")
+
+10. select e.first_name, e.last_name
+	from employees e
+	inner join dept_manager dm
+	on dm.dept_no=(select d.dept_no
+	from departments d
+	where d.dept_name="customer service" and e.gender like 'F')
+
+11. select e.first_name, e.last_name
+	from employees e
+	inner join dept_manager dm
+	on dm.dept_no=(select d.dept_no
+	from departments d
+	where d.dept_name="customer service" 
+	and e.gender like 'F') 
+	where from_date between '1985-01-01' and '1990-12-31'
+
+12. select e.first_name, e.last_name, t.title
+	from employees e
+	inner join titles t
+	on t.emp_no=e.emp_no
+	inner join dept_manager dm
+	on dm.dept_no=(select d.dept_no
+	from departments d
+	where d.dept_name="customer service" 
+	and e.gender like 'F')
+	where t.from_date between '1985-01-01' and '1990-12-31'
+
+13. select count(emp_no) 
+	from employees e
+	where e.gender like ('F')
+
+14. select count(e.emp_no) 
+	from employees e
+	inner join titles t
+	on t.emp_no=e.emp_no
+	where e.gender like ('M')
+	and t.title="senior staff"
+
+15. select avg(s.salary) 
+	from salaries s
+
+
+
