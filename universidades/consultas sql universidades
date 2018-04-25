@@ -1,0 +1,43 @@
+alumnos
+jose lanus
+maria quilmes
+jesus la plata
+pedro avellaneda
+
+profesor
+mario moron
+maxi lanus
+octavio quilmes
+
+universidad
+utnfra avellaneda
+unla lanus
+unlp la plata
+
+universidad profesor
+  u p materia
+1 1 1 programacion
+2 2 1 laboratorio
+3 3 2 matematica
+4 1 2 matematica
+5 2 2 spd
+6 2 3 spd
+
+alumno materia
+1 1 1
+2 2 2
+3 3 3
+4 4 4
+5 1 5
+6 2 6
+7 3 6
+
+1. mostrar el listado de alumnos con su localidad
+
+2. mostrar los profesores con las maerias y la universidad donde se dan
+
+3. mostrar cuantas materias son de un profesor o de una universidad de lanus
+
+4. mostrar la cantidad de alumnos que tienen profesores de quilmes
+
+5. mostrar el profesor que dicta mas materias
